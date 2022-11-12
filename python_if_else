@@ -35,7 +35,7 @@ print("Bye !!")
 #     print("Result is Fail !!")
 
 
-
+# by taking user input
 marks = int(input("Enter Your Number : "))
 
 if marks >= 80:
