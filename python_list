@@ -1,3 +1,5 @@
+# mutable object - changable
+
 # Declare empty list
 L1 = []
 # print(type(L1))
