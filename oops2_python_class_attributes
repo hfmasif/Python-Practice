@@ -1,0 +1,22 @@
+class Employee:
+
+    empCount = 0
+
+    def __init__(self, name, salary):
+        self.emp_name = name
+        self.emp_salary = salary
+        Employee.empCount += 1
+
+    def displayEmployeeInfo(self):
+        print(self.emp_name, self.emp_salary)
+
+    def displayEmployeeCount(self):
+        print("Count Employee :", Employee.empCount)
+
+emp1 = Employee("Asif", 50000)
+emp1.displayEmployeeInfo()
+emp1.countEmployeeInfo()
+
+emp2 = Employee("Akib", 21000)
+emp2.displayEmployeeInfo()
+emp2.countEmployeeInfo()
