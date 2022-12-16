@@ -1,0 +1,71 @@
+# # Inheritance in python
+
+# # ex-1
+# # Base Class or Parent Class
+# class Person():
+#     def __init__(self, name):
+#         self.name = name
+#     def displayName(self):
+#         print(self.name)
+#     # By default we can say that particular person is unemployed
+#     def isEmployed(self):
+#         print(self.name,"is Un-Employed !!")
+
+# # Derived or Child Class
+# class Employee(Person):
+#     def isEmployed(self):
+#         print(self.name, "is Employed !!")
+
+# emp = Person('Asif')
+# emp.displayName()
+# emp.isEmployed()
+
+# emp1 = Employee('Rakib')
+# emp1.displayName()
+# emp1.isEmployed()
+
+
+# ex-2
+# how to initialize constructor of base class
+
+# base/parent class
+class Person():
+    
+    def __init__(self, name):
+        self.name = name
+
+    def displayName(self):
+        print(self.name)
+
+    def isEmployed(self):
+        print(self.name, "is Un-employed !!")
+
+# derived/child class
+class Employee(Person):
+
+    def __init__(self, emp_name, id_num, salary, designation):
+        self.idnumber = id_num
+        self.emp_salary = salary
+        self.emp_designation = designation
+        # # calling constructor of Base class (one way)
+        # Person.__init__(self, emp_name)
+        # calling constructor of Base class (another way-max usable)
+        super().__init__(emp_name)
+
+    def isEmployed(self):
+        print(self.name, "is Employed !!")
+
+    def employeeDetails(self):
+        print("Employee Id is",self.idnumber, ", Employee Salary is", self.emp_salary, ", Employee Designation is", self.emp_designation)
+
+# emp = Person('Asif')
+# emp.displayName()
+# emp.isEmployed()
+# emp.emp_salary
+# emp.employeeDetails()
+
+emp1 = Employee('Asif', 5432, 20000, 'Data Engineer')
+emp1.displayName()
+print(emp1.name)
+emp1.employeeDetails()
+emp1.isEmployed()
