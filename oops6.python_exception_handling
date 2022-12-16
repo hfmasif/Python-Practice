@@ -1,0 +1,216 @@
+# How to handle exceptions in Python
+
+# a = 10
+# print('Hello !!')
+# print(a/0)
+# print('Bye !!!') # Not working
+
+# list_a = [2,6,8,1,30]
+# print( list_a[7] )
+
+# Ex-1
+# a = 5
+# try:
+#     result = a/0
+#     print(result)
+# except:
+#     print("Some Error Has Occured !!!")
+# print("Bye !!") # It's working
+
+# Ex-2
+# num = 5
+# list_a = [1,2,3,4,7,90,20]
+# dict_a = {'Asif' : 25, 'Rahul' : 30}
+# try:
+#     print("Divide number by 0")
+#     result = num / 0
+#     print(result)
+#     print("Step 1 Done !")
+
+#     print("Access 11'th element from List")
+#     print(list_a[11])
+#     print("Step 2 Done !")
+
+#     print("Access value of Amit from dictionary")
+#     print(dict_a['amit'])
+#     print("Step 3 Done !")
+# except:
+#     print("Some error has occured !!!")
+
+# print("=====")
+
+# # Ex-3
+# num = 5
+# list_a = [1,2,3,4,7,90,20]
+# dict_a = {'Asif' : 25, 'Rahul' : 30}
+# try:
+#     print("Divide number by 0")
+#     result = num / 5
+#     print(result)
+#     print("Step 1 Done !")
+
+#     print("Access 11'th element from List")
+#     print(list_a[11])
+#     print("Step 2 Done !")
+
+#     print("Access value of Amit from dictionary")
+#     print(dict_a['amit'])
+#     print("Step 3 Done !")
+# except:
+#     print("Some error has occured !!!")
+
+# print("=====")
+
+# # Ex-4
+# num = 5
+# list_a = [1,2,3,4,7,90,20]
+# dict_a = {'Asif' : 25, 'Rahul' : 30}
+# try:
+#     print("Divide number by 0")
+#     result = num / 5
+#     print(result)
+#     print("Step 1 Done !")
+
+#     print("Access 5'th element from List")
+#     print(list_a[5])
+#     print("Step 2 Done !")
+
+#     print("Access value of Amit from dictionary")
+#     print(dict_a['amit'])
+#     print("Step 3 Done !")
+# except:
+#     print("Some error has occured !!!")
+
+# print("=====")
+
+# # Ex-5
+# num = 5
+# list_a = [1,2,3,4,7,90,20]
+# dict_a = {'Asif' : 25, 'Rahul' : 30}
+# try:
+#     print("Divide number by 0")
+#     result = num / 5
+#     print(result)
+#     print("Step 1 Done !")
+
+#     print("Access 5'th element from List")
+#     print(list_a[5])
+#     print("Step 2 Done !")
+
+#     print("Access value of Asif from dictionary")
+#     print(dict_a['Asif'])
+#     print("Step 3 Done !")
+# except:
+#     print("Some error has occured !!!")
+
+
+
+# Built-in exceptions( for getting specific error )
+# Ex-6
+# num = 5
+# list_a = [1,2,3,4,7,90,20]
+# dict_a = {'Asif' : 25, 'Rahul' : 30}
+# try:
+#     print("Divide number by 0")
+#     # result = num / 0
+#     result = num / 5
+#     print(result)
+#     print("Step 1 Done !")
+
+#     print("Access 11'th element from List")
+#     # print(list_a[11])
+#     print(list_a[5])
+#     print("Step 2 Done !")
+
+#     print("Access value of Amit from dictionary")
+#     # print(dict_a['amit'])
+#     print(dict_a['Asif'])
+#     print("Step 3 Done !")
+# except ZeroDivisionError:
+#     print("This error was occured becaz division by 0 happended !!!")
+# except IndexError:
+#     print("Out of bound index is getting accessed !!")
+# except KeyError:
+#     print("Search key doesn't Exists !!")
+
+
+# If i dont know the type of error then
+# Ex-7
+# num = 5
+# list_a = [1,2,3,4,7,90,20]
+# dict_a = {'Asif' : 25, 'Rahul' : 30}
+# try:
+#     print("Divide number by 0")
+#     # result = num / 0
+#     result = num / 5
+#     print(result)
+#     print("Step 1 Done !")
+
+#     print("Access 11'th element from List")
+#     print(list_a[11])
+#     # print(list_a[5])
+#     print("Step 2 Done !")
+
+#     print("Access value of Amit from dictionary")
+#     print(dict_a['amit'])
+#     print(dict_a['Asif'])
+#     print("Step 3 Done !")
+# except Exception as err:
+#     print("Error Occured and Message :", err)
+
+
+# 1st priority is for known exception block
+# Ex-8
+# num = 5
+# list_a = [1,2,3,4,7,90,20]
+# dict_a = {'Asif' : 25, 'Rahul' : 30}
+# try:
+#     print("Divide number by 0")
+#     # result = num / 0
+#     result = num / 5
+#     print(result)
+#     print("Step 1 Done !")
+
+#     print("Access 11'th element from List")
+#     print(list_a[11])
+#     # print(list_a[5])
+#     print("Step 2 Done !")
+
+#     print("Access value of Amit from dictionary")
+#     print(dict_a['amit'])
+#     print(dict_a['Asif'])
+#     print("Step 3 Done !")
+# except ZeroDivisionError:
+#     print("This error was occured becaz division by 0 happended !!!")
+# except IndexError:
+#     print("Out of bound index is getting accessed !!")
+# except KeyError:
+#     print("Search key doesn't Exists !!")
+# except Exception as err:
+#     print("Error Occured and Message :", err)
+
+
+
+# Use of else block
+a = 5
+try:
+    # result = a / 0
+    result = a / 2
+except ZeroDivisionError:
+    print("Error occured bcaz of Division by 0 !!")
+else:
+    print("Calculation Completed !!")
+    print(result)
+
+# Use of Finally Keyword
+a = 5
+try:
+    result = a / 0
+    # result = a / 2
+except ZeroDivisionError:
+    print("Error occured bcaz of Division by 0 !!")
+else:
+    print("Calculation Completed !!")
+    print(result)
+finally:
+    print("Doesn't matter try-except but I will print myself always!!")
